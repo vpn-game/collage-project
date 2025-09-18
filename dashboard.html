@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+    }
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+      gap: 20px;
+    }
+    .card {
+      background-color: white;
+      width: 220px;
+      height: 180px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #4CAF50;
+    }
+    .card a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #4CAF50;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      .dashboard {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>🎓 My Student Dashboard</header>
+
+  <div class="dashboard">
+    <div class="card">
+      <i class="fas fa-book"></i>
+      <a href="notes.html">My Notes</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-calendar-check"></i>
+      <a href="attendance.html">Attendance</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-calculator"></i>
+      <a href="calculator.html">Calculator</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-tasks"></i>
+      <a href="tasks.html">My Tasks</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-friends"></i>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 My Dashboard | Made for Students</footer>
+
+</body>
+</html>

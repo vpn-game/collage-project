@@ -1,0 +1,119 @@
+/* ============================
+   GLOBAL STYLES
+============================ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* ============================
+   FORM + INPUT STYLING
+============================ */
+.form-control {
+  border-radius: 8px;
+}
+
+.dark-mode .form-control {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #aaa;
+}
+
+/* ============================
+   BUTTONS
+============================ */
+.dark-mode .btn,
+.dark-mode .btn-outline-dark {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode .btn-outline-dark {
+  border-color: white;
+  color: white;
+}
+
+.dark-mode .btn-primary {
+  background-color: #0066cc;
+  border-color: #005bb5;
+}
+
+.dark-mode .btn-secondary {
+  background-color: #444;
+  border-color: #333;
+}
+
+/* ============================
+   CARDS
+============================ */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* ============================
+   PROGRESS BAR
+============================ */
+.progress {
+  height: 25px;
+}
+
+.progress-bar {
+  line-height: 25px;
+  font-weight: bold;
+}
+
+/* ============================
+   NOTES SECTION
+============================ */
+.notes-section {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.notes-section h3 {
+  color: #333;
+  font-weight: 600;
+}
+
+#noteInput {
+  resize: vertical;
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer p {
+  margin: 0;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Goal Tracker - Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fc;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    .navbar {
+      background-color: #0056d2;
+    }
+
+    .navbar.dark-mode {
+      background-color: #1e1e1e;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 22px;
+      color: white;
+    }
+
+    .navbar-nav .nav-link {
+      color: white;
+      font-weight: 500;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(145deg, #0056d2, #0069ff);
+      color: white;
+      transition: background 0.4s ease;
+    }
+
+    body.dark-mode .hero {
+      background: linear-gradient(145deg, #2c2c2c, #444);
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .card-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+      color: #0056d2;
+    }
+
+    .card {
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, background-color 0.4s, color 0.4s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    body.dark-mode .card {
+      background-color: #1f1f1f;
+      color: #f0f0f0;
+    }
+
+    footer {
+      background-color: #0056d2;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    .dark-toggle {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      margin-left: 15px;
+    }
+
+    .dark-toggle:hover {
+      background-color: white;
+      color: #0056d2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="dashboard.html"><i class="fas fa-bullseye"></i> Study Goal Tracker</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+          <li class="nav-item"><a class="nav-link" href="tasks.html">Tasks</a></li>
+          <li class="nav-item"><a class="nav-link" href="notes.html">Notes</a></li>
+          <li class="nav-item"><a class="nav-link" href="attendance.html">Attendance</a></li>
+          <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+          <li class="nav-item">
+            <a href="login.html" class="btn btn-light btn-sm ms-3">Login</a>
+          </li>
+          <li class="nav-item">
+            <button onclick="toggleDarkMode()" class="btn btn-sm dark-toggle">🌓</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Track. Plan. Achieve.</h1>
+    <p>Your all-in-one teaching assistant to manage tasks, monitor attendance, and empower learning.</p>
+    <a href="#features" class="btn btn-light mt-3 px-4 py-2 fw-bold">Get Started</a>
+  </div>
+
+  <!-- Features Section -->
+  <section class="container py-5" id="features">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <div class="card-icon"><i class="fas fa-tasks"></i></div>
+          <h5 class="fw-bold">Task Management</h5>
+          <p>Add, assign, and track academic tasks with deadlines and progress for each student.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <div class="card-icon"><i class="fas fa-sticky-note"></i></div>
+          <h5 class="fw-bold">Notes Section</h5>
+          <p>Write, upload, and distribute subject notes to students quickly in one place.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <div class="card-icon"><i class="fas fa-user-check"></i></div>
+          <h5 class="fw-bold">Attendance Tracker</h5>
+          <p>Record and view attendance data in visual charts to ensure class discipline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Made by Nimesh, Vamshi, Harsh, Prince, Om<br />
+    &copy; 2025 Study Goal Tracker. All rights reserved.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      document.querySelector(".navbar").classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>
